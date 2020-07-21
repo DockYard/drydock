@@ -6,5 +6,9 @@
   "repository": "https://github.com/DockYard/drydock",
   "author": "Patrick Lindsay <patrick.lindsay@dockyard.com>",
   "license": "MIT",
-  "private": true
+  "private": true,
+  "devDependencies": {
+    "eslint": "^7.5.0",
+    "eslint-plugin-import": "^2.22.0"
+  }
 }
