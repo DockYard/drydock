@@ -1,0 +1,10 @@
+{
+  "name": "drydock",
+  "version": "0.0.0",
+  "description": "React toolkit for DockYard",
+  "main": "index.js",
+  "repository": "https://github.com/DockYard/drydock",
+  "author": "Patrick Lindsay <patrick.lindsay@dockyard.com>",
+  "license": "MIT",
+  "private": true
+}
