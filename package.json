@@ -7,8 +7,19 @@
   "author": "Patrick Lindsay <patrick.lindsay@dockyard.com>",
   "license": "MIT",
   "private": true,
+  "scripts": {
+    "start": "plop"
+  },
+  "bin": {
+    "drydock": "./index.js"
+  },
+  "preferGlobal": true,
   "devDependencies": {
     "eslint": "^7.5.0",
-    "eslint-plugin-import": "^2.22.0"
+    "eslint-plugin-import": "^2.22.0",
+    "plop": "^2.7.2"
+  },
+  "dependencies": {
+    "minimist": "^1.2.5"
   }
 }
