@@ -1,23 +1,38 @@
+const path = require('path');
+const createDir = require('./lib/create-dir');
+
+const currentDir = /^\.\/?$/;
+
 module.exports = function(plop) {
-  plop.setActionType('create-repo', function(answers, config, plop) {
-    console.log(answers);
-    console.log(config);
-    return;
-  });
+  plop.load('./lib/create-dir');
+  plop.load('plop-pack-git-init');
 
   plop.setGenerator('new project', {
     description: 'creates a new project',
     prompts: [
       {
         type: 'string',
-        name: 'name'
+        name: 'path'
       }
     ],
-    actions: [
-      {
-        type: 'create-repo',
-        bar: 'this is a prop'
-      }
-    ]
+    actions(data) {
+      return [
+        {
+          type: 'createDir',
+          path: `${process.cwd()}/${data.path}/`,
+          verbose: true
+        },
+        {
+          type: 'add',
+          path: `${process.cwd()}/${data.path}/package.json`,
+          templateFile: 'templates/package.json'
+        },
+        {
+          type: 'gitInit',
+          path: `${process.cwd()}/${data.path}`,
+          verbose: true
+        }
+      ];
+    }
   });
 };
