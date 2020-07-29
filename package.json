@@ -17,9 +17,11 @@
   "devDependencies": {
     "eslint": "^7.5.0",
     "eslint-plugin-import": "^2.22.0",
-    "plop": "^2.7.2"
+    "plop": "^2.7.2",
+    "plop-pack-git-init": "^0.3.1"
   },
   "dependencies": {
+    "fs-extra": "^9.0.1",
     "minimist": "^1.2.5"
   }
 }
